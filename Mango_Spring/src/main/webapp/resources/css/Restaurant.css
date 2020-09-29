@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* 리뷰 이미지 */
+	.FoodImages { 
+		margin-top: 60px;
+		width: 100%; 
+		height: 340px; 
+		display: flex;
+	}
+	.FoodImages-Item {
+		flex: 1;
+		display: flex;
+		padding: 20px;
+		overflow: hidden;
+	}
+/* 콘텐츠가 담기는 최 상위 틀 */
+	.Contents-Outer { width: 100%; height: auto; display: flex; overflow: hidden;}
+/* 주 콘텐츠를 감싸는 틀 */
+	.Contents-Main { flex:1; height: 100%;}
+	.Contents { width: 100%; height: 2000px; overflow: hidden;}
+	.Contents-View {  
+		width: 700px; 
+		height: 600px; 
+		background-color: white; 
+		margin: 0 auto 0 auto;
+		padding: 0 10px 0 10px;
+	}
+/* 우측 사이드 */
+	.Contents-Side { width: 350px; height: 1000px; background-color: #f2f2f2;}
+/* 음식정 정보 테이블 */
+	.Title {
+		display: flex;
+	}
+	.title {
+		width: 100%;
+		display: flex;
+	}
+	.restaurant-table {
+		border-spacing: 10px;
+		margin-left: -17px;
+	}
+	.restaurant-table tr { 
+		padding-bottom: 10px;
+	}
+	.restaurant-table td {
+		padding: 0 5px 0 5px;
+	}
+	.update {
+		text-align: right;
+		width: 100%;
+	}
+/* 리뷰 작성 버튼 */
+	.write-review {
+		margin-top: 5px;
+		float: right;
+		width: 40px;
+		height: 35px;
+		background: url("./img_header/2018022864551sprites_desktope6f0.png");
+		background-repeat: no-repeat;
+		background-position: -968px -240px;
+		cursor: pointer;
+	}
+	/* .wannago {
+		margin-top: 2px;
+		float: right;
+		width: 45px;
+		height: 43px;
+		background: url("./img_header/2018022864551sprites_desktope6f0.png");
+		background-repeat: no-repeat;
+		background-position: -928px -653px;
+		cursor: pointer;
+	} */
+	
+	.NaverMapApi { height: 400px;}
+	.Restaurants-Popular { padding: 15px 0 15px 0; margin-right: 15px;}
+		
+		.Restaurants-ItemList-Outer2 {
+			height: 100%;
+			width: 100%;
+		}
+		.Restaurants-ItemList2 {
+			padding-left: 10px;
+			height: 100%;
+		}
+		.Restaurants-Item-Outer2 {
+			list-style-type: none;
+			border: 1px;
+			margin: 0px 0 12px 0px;
+		}
+		.Restaurants-Item-Section2 {
+			padding-top: 10px;
+			display: flex;
+			height: 100%;
+			text-align: center;
+		}
+		.Restaurants-ItemLink2 {
+			margin-top: 10px;
+			display: block;
+		}
+		.Restaurants-ItemLink-Thumnail2 {
+			width: 85px;
+			height: 85px;
+			margin-right: 20px;
+		}
+		.Restauants-Thumnail2 {
+			width: 40px;
+			height: 40px;
+		}
+		.Restaurants-ItemInfo-Outer2 span {
+			float: left;
+		}	
+		.Restaurants-Tag { height: 100px; background-color: white; padding: 15px 0 15px 0;}
+		
+		.Contents-Review-Outer {
+			width: 700px;
+			margin: 0 auto 0 auto;
+		}
+		.Contents-Review-ItemList {
+			padding: 10px;
+			width: 100%;
+			height: auto;
+		}
+		.Contents-Review-Item {
+			list-style-type: none;
+		}
+		.Content-Review-Item-a {
+			display: flex;
+			text-decoration: none;
+		}
+/* 하단 리뷰 리스트 */
+		.Review-Profile {
+		}
+		
+		.Review-Contents {
+			color: black;
+			width: 100%;
+			padding-top: 10px;
+		}
+		
+		.Review-evaluation {
+			
+		}
+		.User-Image {
+			width: 65px;
+			height: 65px;
+		    border-radius: 50px;
+		    overflow: hidden;
+		}
+		.Review-Profile {
+			text-align: center;
+			padding: 15px 20px 0 25px;
+		}
+		.User-Image img {
+			height: 100%;
+			margin-bottom: 3px;
+		}
+/* 리뷰 평가 이미지 */
+		.happy {
+			background: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -130px -794px;
+			width: 100px;
+			height: 100px;
+		}
+		.neutral {
+			background: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -67px -797px;
+			width: 100px;
+			height: 100px;
+		}
+		.sad {
+			background: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -270px -794px;
+			width: 100px;
+			height: 100px;
+		}

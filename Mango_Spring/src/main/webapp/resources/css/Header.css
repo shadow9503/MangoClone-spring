@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/*//////////////*/
+/* 헤더 */
+/*//////////////*/
+		.mango-logo {
+			padding: 0;
+			margin: 8px 20px 0 22px;
+			background: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -826px -730px;
+			width: 105px;
+			height: 40px;
+			cursor: pointer;
+		}
+		.mango-logo-White {
+			padding: 0;
+			margin: 3px 20px 0 20px;
+			background: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -666px -690px;
+			width: 115px;
+			height: 60px;
+			cursor: pointer;
+		}
+		.Header-White {
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 60px;
+			z-index: 800;
+			background-color: white;
+			box-shadow: 0 0 1em rgba(0,0,0,0.2);
+			display: flex;
+		}
+		.Header {
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 60px;
+			z-index: 800;
+			display: flex;
+		}
+		.Header-White ul {
+			padding: 0;
+			margin: 0;
+			height: 60px;
+			display: flex;
+		}
+		.Header ul {
+			padding: 0;
+			margin: 0;
+			height: 60px;
+			display: flex;
+		}
+		 .Header-White ul .Header-White-Btn-TopList {
+			float: right;
+			padding: 23px;
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			color: white;
+			list-style-type: none;
+			border-left: solid 1px gray;
+		}
+		.Header-White ul .Header-White-Btn-MangoPick {
+			float: right;
+			padding: 23px;
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			color: white;
+			list-style-type: none;
+			border-left: solid 1px gray;
+		}
+		.Header-White ul .Header-White-Btn-Profile {
+			display: flex;
+			flex: 1;
+			width: 60px;
+			height: 60px;
+			list-style-type: none;
+			border-left: solid 1px gray;
+		}
+		.Header-White ul .Header-Btn-Profile {
+			display: flex;
+			flex: 1;
+			width: 60px;
+			height: 60px;
+			list-style-type: none;
+			border-left: solid 1px gray;
+		}
+		.Header ul .Header-Btn-TopList {
+			padding: 23px;
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			color: white;
+			list-style-type: none;
+		}
+		.Header ul .Header-Btn-MangoPick {
+			padding: 23px;
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			color: white;
+			list-style-type: none;
+		}
+		.Header ul .Header-Btn-Profile {
+			display: flex;
+			width: 60px;
+			height: 60px;
+			list-style-type: none;
+		}
+		.Header-White ul li a {
+			text-decoration: none;
+			color: gray;
+			cursor: pointer;
+		}
+		.Header ul li a {
+			text-decoration: none;
+			color: white;
+			cursor: pointer;
+		}
+		.Header-SearchBox {
+			display: flex;
+			flex: 1;
+			height: 60px;
+			visibility: visible;
+		}
+		.Header-SearchBox-Hidden {
+			display: flex;
+			flex: 1;
+			height: 60px;
+			visibility: hidden;
+		}.Header-SearchIcon {
+			padding: 0;
+			margin: 16px 5px 0 20px;
+			background: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -973px -158px;
+			width: 30px;
+			height: 30px;
+		}
+		.Header-SearchInput {
+			outline: none;
+			border: none;
+			margin: 21px 0 0 0;
+			font-size: 15px;
+		}
+		.Header-Btn-Profile {
+		}
+		.Header-Btn-Profile-Image-off {
+			padding: 0;
+			margin: 13px;
+			width: 35px;
+			height: 35px;
+			background: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -82px -920px;
+			cursor: pointer;
+		}
+		.Header-Btn-Profile-Image-on {
+			width: 35px;
+			height: 35px;
+			/* background-repeat: no-repeat;
+			background-position: -82px -920px; */
+			cursor: pointer;
+		}
+		.Profile-Outer {
+			margin: 11px 10px 10px 11px;
+			width: 35px;
+			height: 35px;
+			border-radius: 50px;
+			border: solid 3px #ff6f00;
+			overflow: hidden;
+		}
+		.Hidden { display: none;}
+
+/*//////////////*/		
+/* 로그인 다이어로그 */
+/*//////////////*/
+		.Dialog-Login {
+			background-color: white;
+			border-radius: 5px;
+			position: relative;
+		}
+		#login-form-btn{
+			position: absolute;
+			margin: 60px 0 0 60px;
+		}
+		.Dialog-Btn-Close {
+			width: 100%;
+			cursor: pointer;
+			position: relative;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			padding: 15px 15px 0 0;
+			text-align: right;
+		}
+		.Dialog-Btn-Close h1 {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+		.ui-dialog-content {
+			box-shadow: 0 0 2px 0;
+		}
+		.ui-widget-overlay {
+			margin-top: -60px;
+			position: absolute;
+			top: 0;
+		}
+		.KakaoLoginForm-Hidden {
+			display: none;
+		}
+/*/////////////*/		
+/* 쿠키 다이어로그 */
+/*/////////////*/	
+		
+		.Dialog-Cookie {
+			background-color: white;
+			border-radius: 5px;
+			position: relative;
+		}
+		
+		.Dialog-Cookie-Btn-Outer {
+			width: 100%;
+			height: 50px;
+			border-bottom: solid 1px gray;
+		}	
+		.Dialog-Cookie-Btns {
+			height: 50px;
+			display: flex;
+			padding: 0;
+			margin : -60px 0 0 0;
+		}
+		.Dialog-Cookie-Btns li {
+			text-align: center;
+			width: 50%;
+			height: 20px;
+			padding: 20px 20px 8px 20px;
+			color: gray;
+			list-style-type: none;
+			cursor: pointer;
+		}
+		.Dialog-Cookie-Scrollbox {
+			width: 100%;
+			height: 340px;
+			background-color: white;
+			overflow-y: scroll;
+			border-bottom: solid 1px gray;
+		}
+		.Dialog-Cookie-Login {
+			padding: 10px 36px 10px 36px;
+		}
+		.Dialog-Cookie-Logout {
+			padding: 9px 20px 20px 0px;
+		}
+		.Dialog-Cookie-Login-Btn {
+			height: 40px;
+			border: solid 4px #ff6f00;
+			border-radius: 40px; 
+			text-align: center;
+			color: #ff6f00;
+			cursor: pointer;
+		}
+		.Dialog-Cookie-Logout-Btn {
+			cursor: pointer;
+		}
+		.Dialog-Cookie-Logout-Btn {
+			float: right;
+		}
+		.Dialog-Cookie-Login-Btn h3 {
+			margin: 0;
+			padding-top: 12px;
+		}
+/*////////////////////////////*/
+/* 다이어로그 스크롤 내부 음식점 리스트 */
+/*////////////////////////////*/
+		#cookie-clear {
+			float: right; 
+			color: gray; 
+			margin-right: 5px; 
+			cursor: pointer;
+		}
+		.Restaurants-ItemList-Outer {
+			height: 100%;
+			width: 100%;
+		}
+		.Restaurants-ItemList {
+			height: 100%;
+		}
+		.Restaurants-Item-Outer {
+			vertical-align: middle;
+			height: 65px;
+			list-style-type: none;
+			border: 1px;
+			margin: 0px 0 12px 0px;
+		}
+		.Restaurants-Item-Section {
+			display: flex;
+			height: 100%;
+		}
+		.Restaurants-ItemLink {
+			margin-top: 10px;
+			display: block;
+		}
+		.Restaurants-ItemLink-Thumnail {
+			/* width: 80px;
+			height: 80px; */
+			width: 60px;
+			height: 60px;
+			overflow: hidden;
+			margin-right: 10px;
+			padding-top: 5px;
+		}
+		img#recent-thumnail {
+			width: 80px;
+		}
+		.Restauants-Thumnail {
+			width: 40px;
+			height: 40px;
+		}
+		.Restaurants-ItemInfo-Outer {
+		    width: 60%;
+		    font-size: 13px;
+		}
+		.Restaurants-ItemInfo {
+			color: gray;
+		}
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		a:focus {
+			outline: none;
+		}

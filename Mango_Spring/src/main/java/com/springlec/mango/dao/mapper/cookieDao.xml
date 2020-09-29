@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.springlec.mango.dao.cookieDao">
+
+	<!-- 쿠키 리스트에 들어갈 최근 음식점 리스트 -->
+	<select id="cookieListDao" parameterType="java.util.List" resultType="com.springlec.mango.dto.RestaurantsDto">
+		SELECT SEQ, R_NAME, R_GU, R_DONG, CATEGORY, KIND, IMG, RATING  
+		FROM S_RESTAURANTS 
+		WHERE SEQ IN
+		<foreach item="seq" index="index" collection="list" open="(" separator="," close=")">
+			#{seq}
+		</foreach>
+	</select>
+	
+</mapper>	

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.springlec.mango.dao.loginDao">
+
+	<!-- 회원가입 -->
+	<insert id="signUp">
+		INSERT INTO MANGO_DB.MEMBER(ID_USER, NAME, IMAGE) VALUES(#{param1}, #{param2}, #{param3})
+	</insert>
+	<!-- 로그인 -->
+	<select id="signIn" resultType="com.springlec.mango.dto.MemberDto">
+		SELECT ID_USER, NAME, IMAGE FROM MANGO_DB.MEMBER WHERE ID_USER = #{param1}
+	</select>
+	
+</mapper>	

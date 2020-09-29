@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.springlec.mango.dao.SearchDao">
+		 
+		 <!-- 메인페이지에서 탑리스트 선택시 실행되는 쿼리문 페이지에 맞게 음식점정보를 가져온다--> 
+		 <select id="toplistDao" resultType="com.springlec.mango.dto.RestaurantsDto">
+			SELECT SEQ, R_NAME, ADDR, IMG, RATING FROM MANGO_DB.S_RESTAURANTS WHERE CATEGORY LIKE CONCAT('%', #{param1}, '%') AND ADDR LIKE CONCAT('%', #{param2}, '%') ORDER BY RATING DESC LIMIT #{param3}, 10
+		</select>
+		<!-- 메인페이지에서 탑리스트 선택시 실행되는 쿼리문 선택된 카테고리의 음식점의 전체개수를 가져온다 --> 
+		<select id="tableCount" resultType="int" >
+			SELECT COUNT(*) FROM MANGO_DB.S_RESTAURANTS WHERE CATEGORY LIKE CONCAT('%', #{param1}, '%') AND ADDR LIKE CONCAT('%', #{param2}, '%')
+		</select>
+		<!-- 탑리스트에서 음식점 선택시 실행되는 쿼리문 선택된 음식점의 전체 정보를 가져온다 --> 
+		<select id="searchRestaurant" resultType="com.springlec.mango.dto.RestaurantsDto">
+			SELECT SEQ, R_NAME, RATING, R_GU, ADDR, TEL, KIND, OPEN_TIME, HOLIDAY, MENU, CATEGORY, IMG FROM S_RESTAURANTS WHERE SEQ = #{param1}
+		</select>
+		<!-- 탑리스트에서 음식점 선택시 실행되는 쿼리문 선택된 음식점의 리뷰 정보를 가져온다 --> 
+		<select id="reviewList" resultType="com.springlec.mango.dto.ReviewDto">
+			SELECT SEQ_REVIEW, MEMBER_ID_USER, R_SEQ, CONTENT, RATING, IMAGE, USER_IMG, USER_NAME, DATE FROM REVIEW WHERE R_SEQ = #{param1} LIMIT #{param2} , 5
+		</select>
+		<!-- 음식점 정보 상세 페이지에서 행당음식점의 근처 음식점의 정보를 가져온다 --> 
+		 <select id="nearbyRestaurant" resultType="com.springlec.mango.dto.RestaurantsDto">
+		  	SELECT SEQ, R_NAME, RATING, R_GU, ADDR, TEL, KIND, OPEN_TIME, HOLIDAY, MENU, CATEGORY, IMG FROM S_RESTAURANTS WHERE SEQ NOT IN ( #{param1} ) AND ADDR LIKE CONCAT('%', #{param2}, '%')ORDER BY RATING DESC LIMIT 4
+		 </select>
+		 <!-- 검색창에서 검색한 정보의 음식점 리스트를 가져온다 --> 
+		 <select id="search" resultType="com.springlec.mango.dto.RestaurantsDto">
+		  	SELECT SEQ, R_NAME, R_GU, R_DONG, CATEGORY, KIND, IMG, RATING, ADDR  FROM S_RESTAURANTS WHERE R_NAME LIKE CONCAT('%', #{param1}, '%')  OR CATEGORY LIKE CONCAT('%', #{param1}, '%')  OR ADDR LIKE CONCAT('%', #{param1}, '%')  ORDER BY RATING DESC LIMIT #{param2}, 10		
+		 </select>
+		<select id="r_tableCount" resultType="int" >
+			SELECT COUNT(*) FROM MANGO_DB.S_RESTAURANTS WHERE R_NAME LIKE CONCAT('%', #{param1}, '%')  OR CATEGORY LIKE CONCAT('%', #{param1}, '%')  OR ADDR LIKE CONCAT('%', #{param1}, '%')
+		</select>
+		<select id="ratingList" resultType="com.springlec.mango.dto.RestaurantsDto">
+			SELECT SEQ, R_NAME, R_GU, R_DONG, CATEGORY, KIND, IMG, RATING FROM MANGO_DB.S_RESTAURANTS ORDER BY RATING DESC LIMIT 8
+		</select>
+	</mapper>

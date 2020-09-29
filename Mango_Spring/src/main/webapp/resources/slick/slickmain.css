@@ -1,0 +1,108 @@
+@charset "UTF-8";
+	/* article,
+	aside,
+	canvas,
+	details,
+	figcaption,
+	figure,
+	footer, 
+	header,
+	nav,
+	menu,
+	nav,
+	section,
+	main {
+	    display: block;
+	} */
+	html,
+	body,
+	div,
+	span,
+	object,
+	iframe,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	blockquote,
+	pre,
+	a,
+	abbr,
+	address,
+	cite,
+	code,
+	del,
+	dfn,
+	em,
+	font,
+	img,
+	ins,
+	q,
+	s,
+	samp,
+	strike,
+	strong,
+	sub,
+	sup,
+	dl,
+	dt,
+	dd,
+	ol,
+	ul,
+	li,
+	fieldset,
+	form,
+	label,
+	legend {
+	    border: 0 none;
+	}
+	
+	.slick-slide img{
+		width: 90%;
+		margin-bottom: 20px;
+		height: 320px;
+	}
+	
+	html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* * {
+    
+      box-sizing: border-box;
+    } */
+
+    .slider {
+        width: 75%;
+        margin: 30px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+      cursor: pointer;    
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+	
+

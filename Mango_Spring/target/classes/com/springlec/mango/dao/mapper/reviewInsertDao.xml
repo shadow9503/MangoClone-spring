@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.springlec.mango.dao.reviewInsertDao">
+
+	<!-- 리뷰 입력 쿼리문 -->
+	<insert id="ReviewinsertDao">
+		INSERT INTO REVIEW(MEMBER_ID_USER, R_SEQ, CONTENT, RATING, IMAGE, USER_IMG, USER_NAME, DATE) 
+		VALUES (#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}, now())
+	</insert>
+	
+</mapper>	
+

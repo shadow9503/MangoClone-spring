@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.springlec.mango.dao.ReviewDao">
+
+	<!-- 리뷰 클릭시 리뷰 정보 받아오는 쿼리 -->
+	<select id="reviewClick" resultType="com.springlec.mango.dto.ReviewClickDto">
+		SELECT A.R_SEQ, A.CONTENT, A.DATE, A.RATING, A.IMAGE AS R_IMAGE, B.NAME, B.IMAGE AS M_IMAGE, C.R_NAME FROM MANGO_DB.REVIEW AS A, MANGO_DB.MEMBER AS B, MANGO_DB.S_RESTAURANTS AS C WHERE SEQ_REVIEW = #{0} AND C.SEQ = A.R_SEQ AND B.ID_USER = A.MEMBER_ID_USER;
+	</select>
+	<!-- 음식점 상단 이미지 클릭시 리뷰 리스트 조회 -->
+	<select id="reviewList" resultType="com.springlec.mango.dto.ReviewImageClickDto">
+		SELECT A.CONTENT, A.DATE, A.RATING, A.IMAGE AS R_IMAGE, B.NAME, B.IMAGE AS M_IMAGE FROM MANGO_DB.REVIEW AS A, MANGO_DB.MEMBER AS B WHERE R_SEQ = #{0} AND A.MEMBER_ID_USER = B.ID_USER;
+	</select>
+	
+</mapper>

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+		.Contents-Search-Header {
+			padding: 20px 0 20px 40px;
+		}
+		.ItemList {
+			width: 100%;
+			height: 1700px;
+		}
+		.Item-Container {
+			width: 420px;
+			display: inline-block;
+		}
+		.image {
+			margin-bottom: 5px;
+			width: 340px;
+			height: 240px;
+			overflow: hidden;
+		}
+		.Item {
+			width: 1000px;
+		}
+		.Search-Category {
+			display: flex;
+			width: 752px;
+			height: 40px;
+			border: solid 1px rgba(138, 138, 138, 0.25);
+			padding-left: 10px;
+		}
+		.Search-Category li {
+			color: gray;
+			margin: 18px 12px 15px 0;
+			padding: 0 12px 0 0;
+			height: 5px;
+			cursor: pointer;
+			border-right: solid 2px rgba(138, 138, 138, 0.25);
+			line-height: 7px;
+		}
+		.Search-Title {
+			display: flex;
+		}
+		.Search-Title h2 {
+			margin-right: 424px;
+		}
+		.Search-Title i {
+			background-image: url("./img_header/2018022864551sprites_desktope6f0.png");
+			background-repeat: no-repeat;
+			background-position: -409px -863px;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+		}
+		.Contents-Search { width: 100%; height: 2400px; overflow: hidden; margin-top: 60px;}
+		.Contents-Search-View {  
+			width: 850px;
+			height: 2000px; 
+			background-color: white; 
+			margin: 0 auto 0 auto;
+			padding: 0 10px 0 10px;
+		}
+		.Contents-Search-Outer {
+			 width: 100%; 
+			 height: 2000px; 
+			 display: flex; 
+			 overflow: hidden;
+		}
+		.Contents-Search-Main { flex:1; height: 2000px;}
+		.page { padding-left: 40px;}
+		.Item li { color: gray; }
+		.store_name { color: rgba(38, 38, 38, 1) !important; font-size: 19px;}
+		.store_rating { color: #ff6f00 !important; font-size: 19px;}
+		ul li { list-style-type:  none; font-size: 14px;}
+		h2 { color: #ff6f00; font-weight: normal;}
